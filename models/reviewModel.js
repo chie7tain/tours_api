@@ -40,6 +40,8 @@ const reviewSchema = new mongoose.Schema(
   },
 );
 
+reviewSchema.index({ tour: 1, user: 1 }, { unique: true }); //to prevent multiple reviews for the same tour by same user
+
 reviewSchema.pre(/^find/, function (next) {
   this.populate([
     {
