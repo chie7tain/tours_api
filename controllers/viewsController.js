@@ -1,5 +1,4 @@
 const Tour = require('../models/tourModel');
-const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 
 exports.getOverView = catchAsync(async (req, res) => {
