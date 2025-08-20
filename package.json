@@ -6,7 +6,9 @@
   "scripts": {
     "start": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
-    "debug": "ndb server.js"
+    "debug": "ndb server.js",
+    "watch:js": "parcel watch ./public/js/bundle.js --dist-dir ./public/js --no-source-maps",
+    "build:js": "parcel watch ./public/js/bundle.js --dist-dir ./public/js --no-source-maps --no-content-hash"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,8 @@
   },
   "homepage": "https://github.com/chie7tain/travel_tours_api#readme",
   "dependencies": {
-    "axios": "^1.10.0",
+    "@babel/polyfill": "^7.12.1",
+    "axios": "^1.11.0",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.5.0",
@@ -48,9 +51,11 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-react": "^7.37.5",
+    "parcel": "^2.15.4",
     "prettier": "^3.5.3"
   },
   "engines": {
     "node": "20.16.0"
-  }
+  },
+  "sourceType": {}
 }
